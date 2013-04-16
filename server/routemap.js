@@ -16,7 +16,8 @@ var requestHandlers = require("./requestHandlers");
 var routemap = {
     "get":{
         "/api2/access/:operation":requestHandlers.demo1,
-        "/api2/redis/:operation":requestHandlers.demo2
+        "/api2/redis/:operation":requestHandlers.demo2,
+        "/api2/neo4j/:operation":requestHandlers.demo3
     },
     "post":{
     },

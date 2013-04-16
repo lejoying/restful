@@ -29,4 +29,16 @@ requestHandlers.demo2 = function (request, response, pathObject, getParam) {
     }
 };
 
+
+var demo3 = require('./handlers/demo3');
+requestHandlers.demo3 = function (request, response, pathObject, getParam) {
+    var operation = pathObject["operation"];
+    if (operation == "get") {
+        demo3.get(response);
+    } else if (operation == "reset") {
+        var i = getParam["i"];
+        demo3.reset(i, response);
+    }
+};
+
 module.exports = requestHandlers;
